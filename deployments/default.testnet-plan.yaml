@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: degree-verification-dapp
+            expected-sender: ST28K30VZNJYGGSVF2SFEBY9S5Z1WE2397H2AR9MX
+            cost: 21400
+            path: "contracts\\degree-verification-dapp.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.1"
